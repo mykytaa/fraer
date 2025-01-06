@@ -1,0 +1,83 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tapnad</title>
+  <!-- Подключение стилей -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+  <div class="navigation-window">
+    <!-- Панель вкладок -->
+    <div class="tabs">
+      <button class="tab-button active" data-tab="tap-section">Tap</button>
+      <button class="tab-button" data-tab="challenges-section">Challenges</button>
+      <button class="tab-button" data-tab="leaderboard-section">Leaderboard</button>
+      <button class="tab-button" data-tab="shop-section">Shop</button>
+      <button class="tab-button" data-tab="referrals-section">Referrals</button>
+    </div>
+
+    <!-- Содержимое вкладок -->
+    <div id="tap-section" class="tab-content active">
+      <div id="tap-area">
+        <img id="tap-coin" src="assets/images/purple-pepe.png" alt="Tap the Frog">
+      </div>
+      <p id="level">Level: 1</p>
+      <p id="coins">Coins: 0</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <div id="challenges-section" class="tab-content">
+      <h2>Challenges</h2>
+      <div id="challenge-list" class="challenge-grid">
+        <!-- Карточки будут динамически добавляться через JavaScript -->
+      </div>
+    </div>
+
+    <div id="leaderboard-section" class="tab-content">
+      <h2>Leaderboard</h2>
+      <div id="leaderboard-list">
+        <!-- Таблица создаётся через JS -->
+      </div>
+    </div>
+
+    <div id="shop-section" class="tab-content">
+      <h2>Shop</h2>
+      <div id="shop-buttons">
+        <button id="upgrade-tap">Upgrade Tap (Cost: 100 Coins)</button>
+        <button id="buy-autotapper">Buy Autotapper (Cost: 500 Coins)</button>
+        <button id="reduce-challenge-cost">Reduce Challenge Costs (Cost: 300 Coins)</button>
+      </div>
+      <p id="shop-info">Current Tap Value: <span id="tap-value">1</span></p>
+    </div>
+
+    <div id="referrals-section" class="tab-content">
+      <div class="referral-container">
+        <p>Your referral link:</p>
+        <div class="referral-link-box">
+          <input type="text" id="referral-link" readonly>
+          <button onclick="copyReferralLink()">Copy Link</button>
+        </div>
+        <p>Referrals Count: <span id="referrals-count">0</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Подключение JavaScript -->
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/tap.js"></script>
+  <script src="assets/js/challenges.js"></script>
+  <script src="assets/js/shop.js"></script>
+  <script src="assets/js/leaderboard.js"></script>
+  <script src="assets/js/referral.js"></script>
+  <script src="assets/js/phantom.js"></script>
+  <script src="assets/js/modal.js"></script>
+</body>
+</html>

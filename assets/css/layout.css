@@ -1,0 +1,52 @@
+/* Вкладки */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .tab-button {
+    background: rgba(50, 0, 100, 0.8);
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .tab-button.active {
+    background: #9B30FF;
+    font-weight: bold;
+  }
+  
+  .tab-button:hover {
+    background: #7A0BC0;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  /* Прогресс-бар */
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(155, 48, 255, 0.3);
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #7A0BC0, #FFD700);
+    width: 0;
+    transition: width 0.5s ease;
+  }
+  
