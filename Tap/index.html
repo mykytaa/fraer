@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tapnad</title>
+  <!-- Подключение стилей -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/shop.css">
+  <link rel="stylesheet" href="pepe.css"> <!-- Подключаем новый CSS для анимации -->
+</head>
+<body>
+  <!-- Кнопка подключения кошелька -->
+  <button id="connect-wallet-button" onclick="connectPhantomWallet()">Connect Wallet</button>
+
+  <div class="container">
+    <div class="header">
+      <h1 class="title">Tapnad</h1>
+    </div>
+
+    <!-- Навигация -->
+    <div class="tabs">
+      <button class="tab-button active" data-tab="tap-section">Tap</button>
+      <button class="tab-button" data-tab="challenges-section">Challenges</button>
+      <button class="tab-button" data-tab="leaderboard-section">Leaderboard</button>
+      <button class="tab-button" data-tab="shop-section">Shop</button>
+    </div>
+
+    <!-- Секции -->
+    <div id="tap-section" class="tab-content">
+      <div id="tap-area">
+        <img id="tap-coin" src="assets/images/purple-pepe.png" alt="Tap the Frog">
+      </div>
+      <p id="level">Level: 1</p>
+      <p id="coins">Coins: 0</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <div id="challenges-section" class="tab-content" style="display: none;">
+      <h2>Challenges</h2>
+      <div id="challenge-list" class="challenge-grid">
+        <!-- Карточки будут динамически добавляться через JavaScript -->
+      </div>
+    </div>
+
+    <div id="leaderboard-section" class="tab-content" style="display: none;">
+      <ol id="leaderboard-list"></ol>
+    </div>
+
+    <div id="shop-section" class="tab-content" style="display: none;">
+      <h2>Shop</h2>
+      <div id="shop-buttons"></div>
+      <p id="coins">Coins: 1000</p>
+      <div id="notification-area"></div>
+    </div>
+    
+  <!-- Модальное окно -->
+  <div id="nickname-modal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Enter your nickname</h2>
+        <input type="text" id="nickname-input" placeholder="Your nickname">
+        <div class="modal-buttons">
+            <button onclick="confirmNickname()">Save</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+  </div>
+
+  <div id="notification-area"></div>
+
+  <!-- Подключение JavaScript -->
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/tap.js"></script>
+  <script src="assets/js/challenges.js"></script>
+  <script src="assets/js/shop.js"></script>
+  <script src="assets/js/leaderboard.js"></script>
+  <script src="assets/js/referral.js"></script>
+  <script src="assets/js/phantom.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="pepe.js"></script> <!-- Подключаем новый JS для анимации -->
+</body>
+</html>

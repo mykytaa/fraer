@@ -1,0 +1,27 @@
+/* Основные настройки */
+body {
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #3C1361 0%, #2E0854 50%, #1B0034 100%);
+    color: #E0E0E0;
+    flex-direction: column;
+  }
+  
+  .container {
+    background: linear-gradient(145deg, #502572, #3A1E61);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .title {
+    font-size: 30px;
+    color: #D4B0FF;
+  }
+  

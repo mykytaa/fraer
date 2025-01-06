@@ -1,0 +1,102 @@
+#shop-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Дві картки на строку */
+    gap: 50px; /* Увеличено расстояние между карточками */
+    padding: 20px;
+    max-width: 800px; /* Центрируем ширину */
+    margin: 0 auto;
+    justify-items: center; /* Центрируем все карточки */
+  }
+  
+  /* Карточка товара */
+  .shop-card {
+    background-color: rgba(58, 30, 97, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 280px; /* Уменьшена высота карточки для компактности */
+    max-width: 230px;
+    width: 100%;
+    overflow: hidden; /* Обрезаем текст, если он выходит за пределы */
+    text-align: center; /* Центрируем текст */
+    position: relative;
+  }
+  
+  /* Эффект при наведении */
+  .shop-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Заголовок товара */
+  .shop-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 8px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Скрываем переполненный текст с троеточием */
+    white-space: nowrap; /* Предотвращаем перенос текста */
+  }
+  
+  /* Иконка товара */
+  .shop-card-icon {
+    width: 110px; /* Размеры иконок */
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Описание товара */
+  .shop-card-description {
+    font-size: 12px;
+    color: #ccc;
+    margin-bottom: 8px;
+    word-wrap: break-word; /* Разбиваем длинные слова на несколько строк */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Скрываем переполненный текст с троеточием */
+    white-space: normal; /* Текст может переноситься */
+    max-height: 40px; /* Ограничиваем высоту описания, чтобы текст не выходил за пределы */
+    line-height: 1.2;
+  }
+  
+  /* Стоимость товара */
+  .shop-card-cost {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Скрываем переполненный текст с троеточием */
+  }
+  
+  /* Кнопка покупки */
+  .shop-card-button {
+    background-color: #7a0bc0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: auto; /* Отделяем кнопку от контента */
+  }
+  
+  .shop-card-button:hover {
+    background-color: #531091;
+    transform: scale(1.05);
+  }
+  
+  .shop-card-button:disabled {
+    background-color: #444;
+    cursor: not-allowed;
+  }
+  
